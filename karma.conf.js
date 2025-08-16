@@ -32,7 +32,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'Edge'],
+    browsers: process.env.CI ? ['ChromeHeadless', 'EdgeHeadless'] : ['Chrome'],
     singleRun: false,
     restartOnFileChange: true
   });

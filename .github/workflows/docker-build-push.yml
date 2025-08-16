@@ -32,7 +32,9 @@ jobs:
       run: npm ci
 
     - name: Run tests
-      run: npm test -- --watch=false --browsers=ChromeHeadless,EdgeHeadless
+      run: npm test -- --watch=false
+      env:
+        CI: true
 
     - name: Build Angular application
       run: npm run build -- --configuration=production

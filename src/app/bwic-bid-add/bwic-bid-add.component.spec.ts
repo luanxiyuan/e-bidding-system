@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { BwicBidAddComponent } from './bwic-bid-add.component';
 
@@ -8,7 +9,8 @@ describe('BwicBidAddComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BwicBidAddComponent ]
+      declarations: [ BwicBidAddComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
 
