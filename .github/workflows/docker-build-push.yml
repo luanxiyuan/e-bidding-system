@@ -18,8 +18,10 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
+      pages: write
+      id-token: write
 
     steps:
     - name: Checkout repository
@@ -70,8 +72,15 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
-    - name: Deploy to Github Page
-      uses: JamesIves/github-pages-deploy-action@v4
+    - name: Debug build output
+      run: |
+        echo "Checking build output directory:"
+        ls -la dist/
+        echo "Checking Angular build output:"
+        ls -la dist/e-bidding-system/
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
       with:
-        branch: gh-pages
-        folder: dist/e-bidding-system
+        publish_dir: ./dist/e-bidding-system
