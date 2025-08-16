@@ -38,8 +38,14 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Debug repository info
+      run: |
+        echo "Repository name: ${{ github.event.repository.name }}"
+        echo "Repository full name: ${{ github.repository }}"
+        echo "Base href will be: /${{ github.event.repository.name }}/"
+        
     - name: Build Angular application
-      run: npm run build -- --configuration=production --base-href=/${{ github.repository }}/
+      run: npm run build -- --configuration=production --base-href=/${{ github.event.repository.name }}/
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
@@ -82,9 +88,20 @@ jobs:
         ls -la dist/e-bidding-system/
         echo "Checking if index.html exists:"
         ls -la dist/e-bidding-system/index.html
+        echo "Checking assets directory:"
+        ls -la dist/e-bidding-system/assets/
+        echo "Checking plugins directory:"
+        ls -la dist/e-bidding-system/assets/plugins/
+        echo "Checking jquery-validation directory:"
+        ls -la dist/e-bidding-system/assets/plugins/jquery-validation/
 
     - name: Configure GitHub Pages
       uses: actions/configure-pages@v4
+      
+    - name: Check GitHub Pages status
+      run: |
+        echo "GitHub Pages should be configured to serve from gh-pages branch"
+        echo "Please ensure GitHub Pages is enabled in repository settings"
       
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
@@ -92,3 +109,4 @@ jobs:
         branch: gh-pages
         folder: dist/e-bidding-system
         clean: true
+        single-commit: true
