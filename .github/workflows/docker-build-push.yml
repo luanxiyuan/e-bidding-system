@@ -82,8 +82,7 @@ jobs:
         ls -la dist/e-bidding-system/
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/e-bidding-system
+        branch: gh-pages
+        folder: dist/e-bidding-system
