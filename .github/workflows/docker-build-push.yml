@@ -73,10 +73,5 @@ jobs:
     - name: Deploy to Github Page
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.INDIVIDUAL_GITHUB_TOKEN }}
-        publish_dir: ./dist/e-bidding-system
         branch: gh-pages
-        clean: true
-        force: true
-        skip_cleanup: true
-        skip_push: false
+        folder: dist/e-bidding-system
