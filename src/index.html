@@ -6,31 +6,56 @@
   <title>e Bidding System</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="/assets/dist/css/google.font.css">
+  <link rel="stylesheet" href="assets/dist/css/google.font.css">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="/assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
   <!-- Toastr -->
-  <link rel="stylesheet" href="/assets/plugins/toastr/toastr.min.css">
+  <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
 </head>
 <body>
 
   <app-root></app-root>
 
   <!-- jQuery -->
-  <script src="/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="assets/plugins/jquery/jquery.min.js"></script>
   <!-- jquery-validation -->
-  <script src="/assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
   <!-- Bootstrap -->
-  <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE -->
-  <script src="/assets/dist/js/adminlte.min.js"></script>
+  <script src="assets/dist/js/adminlte.min.js"></script>
   <!-- Toastr -->
-  <script src="/assets/plugins/toastr/toastr.min.js"></script>
+  <script src="assets/plugins/toastr/toastr.min.js"></script>
 
   <script>
       $(function () {
