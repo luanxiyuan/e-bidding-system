@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 env:
   REGISTRY: docker.io
@@ -83,4 +85,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist/e-bidding-system
