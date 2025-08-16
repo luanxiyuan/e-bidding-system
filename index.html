@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><base href="/e-bidding-system/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>e Bidding System</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="assets/dist/css/google.font.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/dist/css/google.font.css"></noscript>
+  <!-- Font Awesome Icons -->
+  <style>@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}</style><link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css"></noscript>
+  <!-- Theme style -->
+  <style>:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:"Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}body{margin:0;font-family:"Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}@-webkit-keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}@-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes spinner-grow{0%{-webkit-transform:scale(0);transform:scale(0)}50%{opacity:1;-webkit-transform:none;transform:none}}@media print{*,::after,::before{text-shadow:none!important;box-shadow:none!important}@page{size:a3}body{min-width:992px!important}}@-webkit-keyframes flipInX{0%{-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);transition-timing-function:ease-in;opacity:0}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);transition-timing-function:ease-in}60%{-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotate3d(1,0,0,10deg);opacity:1}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotate3d(1,0,0,-5deg)}100%{-webkit-transform:perspective(400px);transform:perspective(400px)}}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadeOut{from{opacity:1}to{opacity:0}}@-webkit-keyframes shake{0%{-webkit-transform:translate(2px,1px) rotate(0);transform:translate(2px,1px) rotate(0)}10%{-webkit-transform:translate(-1px,-2px) rotate(-2deg);transform:translate(-1px,-2px) rotate(-2deg)}20%{-webkit-transform:translate(-3px,0) rotate(3deg);transform:translate(-3px,0) rotate(3deg)}30%{-webkit-transform:translate(0,2px) rotate(0);transform:translate(0,2px) rotate(0)}40%{-webkit-transform:translate(1px,-1px) rotate(1deg);transform:translate(1px,-1px) rotate(1deg)}50%{-webkit-transform:translate(-1px,2px) rotate(-1deg);transform:translate(-1px,2px) rotate(-1deg)}60%{-webkit-transform:translate(-3px,1px) rotate(0);transform:translate(-3px,1px) rotate(0)}70%{-webkit-transform:translate(2px,1px) rotate(-2deg);transform:translate(2px,1px) rotate(-2deg)}80%{-webkit-transform:translate(-1px,-1px) rotate(4deg);transform:translate(-1px,-1px) rotate(4deg)}90%{-webkit-transform:translate(2px,2px) rotate(0);transform:translate(2px,2px) rotate(0)}100%{-webkit-transform:translate(1px,-2px) rotate(-1deg);transform:translate(1px,-2px) rotate(-1deg)}}@-webkit-keyframes wobble{0%{-webkit-transform:none;transform:none}15%{-webkit-transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg);transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg)}30%{-webkit-transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg);transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg)}45%{-webkit-transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg);transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg)}60%{-webkit-transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg);transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg)}75%{-webkit-transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg)}100%{-webkit-transform:none;transform:none}}body,html{min-height:100%}</style><link rel="stylesheet" href="assets/dist/css/adminlte.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/dist/css/adminlte.min.css"></noscript>
+  <!-- Toastr -->
+  <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css"></noscript>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+<body>
+
+  <app-root></app-root>
+
+  <!-- jQuery -->
+  <script src="assets/plugins/jquery/jquery.min.js"></script>
+  <!-- jquery-validation -->
+  <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE -->
+  <script src="assets/dist/js/adminlte.min.js"></script>
+  <!-- Toastr -->
+  <script src="assets/plugins/toastr/toastr.min.js"></script>
+
+  <script>
+      $(function () {
+          $.validator.setDefaults({
+              submitHandler: function () {
+                //   window.location.href = '/';
+              }
+          });
+          $('#loginForm').validate({
+              rules: {
+                  username: {
+                      required: true
+                  },
+                  password: {
+                      required: true,
+                      minlength: 6
+                  }
+              },
+              messages: {
+                  username: {
+                      required: "Please enter Username"
+                  },
+                  password: {
+                      required: "Please provide a password",
+                      minlength: "Your password must be at least 6 characters long"
+                  }
+              },
+              errorElement: 'span',
+              errorPlacement: function (error, element) {
+                  error.addClass('invalid-feedback');
+                  element.closest('.form-group').append(error);
+              },
+              highlight: function (element, errorClass, validClass) {
+                  $(element).addClass('is-invalid');
+              },
+              unhighlight: function (element, errorClass, validClass) {
+                  $(element).removeClass('is-invalid');
+              }
+          });
+      });
+  </script>
+<script src="runtime.cab490209dc27b37.js" type="module"></script><script src="polyfills.991788d1f4611272.js" type="module"></script><script src="scripts.7e51917f2a8cbd43.js" defer></script><script src="main.50ebf99f5550359c.js" type="module"></script>
+
+</body></html>
